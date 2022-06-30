@@ -8,7 +8,7 @@ This is an archive of PopCap's framework, internally named SexyApp Framework.
 
 Branch `main` has the version that seems to be the closest to what was used for developing Peggle Deluxe and Peggle Nights.
 
-Branch `1.34` has the most up-to-date known version.
+Branch `1.34` has the most up-to-date known version, taken from https://github.com/LolHacksRule/sexy.
 
 ## What is this
 
