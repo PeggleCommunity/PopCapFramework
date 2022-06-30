@@ -26,4 +26,4 @@ This repo is used as reference material for modding Peggle.
 
 ## Aaaaa
 
-For original licensing information, see <a href="PopCap Framework License.txt">PopCap Framework License.txt</a> and <a href="Other Licenses.txt">Other Licenses.txt</a>.
+For original licensing information, see <a href="PopCap Framework License.md">PopCap Framework License</a> and <a href="Other Licenses.md">Other Licenses</a>.
