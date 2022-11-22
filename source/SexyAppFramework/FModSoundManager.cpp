@@ -34,7 +34,7 @@ bool FModSoundManager::Initialized()
 }
 
 bool FModSoundManager::LoadSound(unsigned int theSfxID, const std::string& theFilename)
-{	
+{
 	int aLastDotPos = theFilename.rfind('.');
 	if (aLastDotPos == -1)
 	{
@@ -61,7 +61,7 @@ bool FModSoundManager::LoadSound(unsigned int theSfxID, const std::string& theFi
 	return true;
 }
 
-bool FModSoundManager::LoadSound(const std::string& theFilename)
+int FModSoundManager::LoadSound(const std::string& theFilename)
 {
 	for (int i = MAX_SOURCE_SOUNDS-1; i >= 0; i--)
 	{
