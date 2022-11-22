@@ -3,7 +3,7 @@
 
 #include "Common.h"
 #include "HTTPTransfer.h"
-#include <imagehlp.h>
+#include <DbgHelp.h>
 
 namespace Sexy
 {
@@ -29,9 +29,9 @@ typedef DWORD (__stdcall *SYMGETMODULEBASEPROC)(HANDLE, DWORD);
 
 typedef BOOL (__stdcall *SYMGETSYMFROMADDRPROC)(HANDLE, DWORD, PDWORD, PIMAGEHLP_SYMBOL);
 
-class SEHCatcher 
+class SEHCatcher
 {
-public:	
+public:
 	static SexyAppBase*		mApp;
 	static HFONT			mDialogFont;
 	static HFONT			mBoldFont;
@@ -71,13 +71,13 @@ public:
 
 	static LRESULT CALLBACK SEHWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 	static LRESULT CALLBACK SubmitInfoWindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-	static long __stdcall	UnhandledExceptionFilter(LPEXCEPTION_POINTERS lpExceptPtr);	
+	static long __stdcall	UnhandledExceptionFilter(LPEXCEPTION_POINTERS lpExceptPtr);
 	static void				DoHandleDebugEvent(LPEXCEPTION_POINTERS lpEP);
 	static bool				GetLogicalAddress(void* addr, char* szModule, DWORD len, DWORD& section, DWORD& offset);
 	static std::string		GetFilename(const std::string& thePath);
 	static void				WriteToFile(const std::string& theErrorText);
 	static void				ShowSubmitInfoDialog();
-	static void				ShowErrorDialog(const std::string& theErrorTitle, const std::string& theErrorText);	
+	static void				ShowErrorDialog(const std::string& theErrorTitle, const std::string& theErrorText);
 	static bool				LoadImageHelp();
 	static void				UnloadImageHelp();
 	static std::string		IntelWalk(PCONTEXT theContext, int theSkipCount);
@@ -94,4 +94,4 @@ extern SEHCatcher gSEHCatcher;
 
 }
 
-#endif 
+#endif
